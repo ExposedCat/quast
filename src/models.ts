@@ -1,39 +1,17 @@
 type Direction = 'left' | 'right' | 'up' | 'down'
 
-interface Player {
-    hp: number,
+interface GameData {
+    info: string,
+    logo: string,
+    content: Icon[][]
+}
+
+interface PlayerData {
     x: number,
     y: number,
-    coins: number
-}
-
-interface GameBackup {
-    logo?: string,
-    info?: string,
-    player?: Player
-}
-
-interface GameData {
-    logo: string,
-    info: string,
-    content: Icon[][],
-    player: Player,
-    stringContent: (enableUnits: boolean) => string,
-    getNewPosition: (direction: Direction) => ({
-        x: number,
-        y: number,
-        exist: boolean
-    }),
-    setCellIcon: (x: number, y: number, icon: Icon) => void,
-    getCellIcon: (x: number, y: number) => Icon,
-    stringPlayerStats: () => string
-}
-
-interface Event {
-    name: string,
-    ctrl: boolean,
-    shift: boolean,
-    code: boolean
+    hp: number,
+    coins: number,
+    damage: number
 }
 
 enum Icon {
@@ -43,9 +21,26 @@ enum Icon {
     way = '-'
 }
 
+interface UnitData {
+    x: number,
+    y: number,
+    hp: number,
+    damage: number
+}
+
+interface Event {
+    sequence: string,
+    name: string,
+    ctrl: boolean,
+    shift: boolean,
+    code: boolean
+}
+
 export {
     Icon,
     Event,
     GameData,
-    GameBackup
+    UnitData,
+    Direction,
+    PlayerData
 }
