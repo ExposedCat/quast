@@ -4,7 +4,8 @@
   "description": "CLI RPG",
   "main": "build/index.js",
   "scripts": {
-    "start": "tsc && node build/index.js"
+    "start": "tsc && node build/index.js",
+    "build": "tsc && mkdir quast && pkg build/index.js -c package.json --out-path quast && mkdir quast/assets && cp assets/* quast/assets"
   },
   "keywords": [
     "cli",
@@ -27,5 +28,12 @@
     "@types/readline-sync": "^1.4.4",
     "tslib": "^2.3.0",
     "typescript": "^4.3.5"
+  },
+  "pkg": {
+    "assets": [
+      "node_modules/**/*"
+    ],
+    "scripts": "build/**/*.js",
+    "targets": [ "node14-linux-x64", "node14-win-x64" ]
   }
 }

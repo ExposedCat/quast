@@ -19,6 +19,7 @@ function reDraw(game: Game, player: Player) {
 }
 
 function storeBackup(game: Game, player: Player, units: Unit[]) {
+    fs.mkdirSync('./saved', { recursive: true })
     fs.writeFileSync('./saved/map.txt',
         game.stringContent(false, player)
     )
@@ -40,6 +41,7 @@ function storeBackup(game: Game, player: Player, units: Unit[]) {
 function restoreGameData() {
     let map = ''
     try {
+        fs.mkdirSync('./saved', { recursive: true })
         map = fs.readFileSync('./saved/map.txt', 'utf-8')
     } catch (e) {
         map = fs.readFileSync('./assets/start-map.txt', 'utf-8')
@@ -55,6 +57,7 @@ function restoreGameData() {
 function restoreUnits(): Unit[] {
     let units = []
     try {
+        fs.mkdirSync('./saved', { recursive: true })
         units = JSON.parse(fs.readFileSync('./saved/units.json', 'utf-8'))
     } catch (e) { }
     return units
@@ -69,6 +72,7 @@ function restorePlayer(): PlayerData {
         damage: 5
     }
     try {
+        fs.mkdirSync('./saved', { recursive: true })
         player = JSON.parse(fs.readFileSync('./saved/player.json', 'utf-8'))
     } catch (e) { }
     return player
