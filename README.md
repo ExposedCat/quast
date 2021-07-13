@@ -8,19 +8,19 @@ Command-line RPG
 Use your package manager to install `nodejs`, `npm` and `git`.
 
 Clone repo:
-```
+```bash
 git clone github.com/ExposedCat/quast.git
 ```
 Go to the project root:
-```
+```bash
 cd quast
 ```
 Install dependencies:
-```
+```bash
 npm i
 ```
 Build project:
-```
+```bash
 npm run build
 ```
 Move built app to `/var/games` or any other path you want:
