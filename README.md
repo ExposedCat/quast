@@ -9,7 +9,7 @@ Use your package manager to install `nodejs`, `npm` and `git`.
 
 Clone repo:
 ```bash
-git clone github.com/ExposedCat/quast.git
+git clone git@github.com:ExposedCat/quast.git
 ```
 Go to the project root:
 ```bash
