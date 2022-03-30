@@ -1,15 +1,9 @@
 import { Icon } from './models'
 import colors from 'chalk'
-import asciiText from 'figlet'
 import { Player } from './units'
 import { restoreGameData } from './utils'
 
 class Game {
-	logo = colors.green(
-		asciiText.textSync('quast', {
-			font: 'ANSI Shadow'
-		})
-	)
 	info: string
 	content: Icon[][] = []
 

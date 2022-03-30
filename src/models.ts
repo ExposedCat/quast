@@ -2,7 +2,6 @@ type Direction = 'left' | 'right' | 'up' | 'down'
 
 interface GameData {
 	info: string
-	logo: string
 	content: Icon[][]
 }
 
