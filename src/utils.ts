@@ -5,12 +5,11 @@ import { Game } from './game'
 
 function reDraw(game: Game, player: Player) {
 	console.clear()
-	console.log(game.logo)
-	console.log(game.info)
 	console.log()
 	console.log(game.stringContent(true, player))
 	console.log()
 	console.log(player.stringStats())
+	console.log(game.info)
 }
 
 function storeBackup(game: Game, player: Player, units: Unit[]) {
