@@ -1,23 +1,18 @@
 {
-    "compilerOptions": {
-        "module": "commonjs",
-        "target": "ESNext",
-        "noImplicitAny": true,
-        "removeComments": true,
-        "preserveConstEnums": true,
-        "outDir": "./build",
-        "sourceMap": true,
-        "rootDir": "./src",
-        "baseUrl": "./",
-        "esModuleInterop": true,
-        "allowSyntheticDefaultImports": true,
-        "importHelpers": true
-    },
-    "include": [
-        "src/**/*.ts"
-    ],
-    "exclude": [
-        "node_modules",
-        "build"
-    ]
+	"compilerOptions": {
+		"module": "commonjs",
+		"target": "ESNext",
+		"noImplicitAny": true,
+		"removeComments": true,
+		"preserveConstEnums": true,
+		"outDir": "./build",
+		"sourceMap": true,
+		"rootDir": "./src",
+		"baseUrl": "./",
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+		"importHelpers": true
+	},
+	"include": ["src/**/*.ts"],
+	"exclude": ["node_modules", "build"]
 }
